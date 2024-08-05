@@ -37,6 +37,11 @@ function TypeSearch(){
         }
     }
 
+    const handleItemClick = (element) =>{
+        setFilter(element.target.innerHTML)
+        setFilteredResult([])
+    }
+
     return (
        
    <div className='container mt-5 d-flex flex-column align-item-center justify-content-center'>
@@ -48,7 +53,7 @@ function TypeSearch(){
                 <ul className='list-group'>
                     {filteredResult.map((item, index) => {
                         return (
-                            <li key={index} className='list-group-item text-align-left'>{item}</li>
+                            <li key={index} className='list-group-item text-align-left' onClick={handleItemClick}>{item}</li>
                         )
                     })}
                 </ul>
