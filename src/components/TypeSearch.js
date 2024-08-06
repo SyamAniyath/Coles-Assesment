@@ -46,13 +46,17 @@ function TypeSearch() {
                 {isUnavailable && <span className='text-secondary'>No result found!</span>}
             </div>
             <div className='col-sm-6 justify-content-center mx-auto'>
-                <ul className='list-group'>
+                {
+                    filter && filteredResult?.length >0 && 
+                    <ul className='list-group'>
                     {filteredResult.map((item, index) => {
                         return (
                             <li key={index} className='list-group-item text-align-left' onClick={handleItemClick}>{item}</li>
                         )
                     })}
                 </ul>
+                }
+                
             </div>
 
         </div>
