@@ -41,7 +41,7 @@ function TypeSearch() {
 
         <div className='container mt-5 d-flex flex-column align-item-center justify-content-center'>
             <div className='form-group col-sm-6 d-flex align-item-center justify-content-center flex-column mx-auto pt-4'>
-                <label htmlFor='my-data' className='text-secondary mt-8'>Search</label>
+                <label htmlFor='my-data' className='text-secondary mt-8'>Search for names</label>
                 <input onChange={onHandleSearch} value={filter} name="myInput" id="my-data" className='form-control col-sm-2 bg-light text-dark' />
                 {isUnavailable && <span className='text-secondary'>No result found!</span>}
             </div>
